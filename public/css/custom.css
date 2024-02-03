@@ -1,0 +1,47 @@
+.table {
+    width: 100% !important;
+}
+
+tfoot {
+    display: table-header-group;
+}
+
+tfoot>tr>th {
+    padding: 5px 5px !important;
+}
+
+.dataTables_processing {
+    display: none !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: left;
+    font-weight: normal;
+    height: 35px;
+    margin-left: 30px;
+    padding-left: 0px;
+}
+
+;
+
+.datepicker table tr td.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover {
+    background-color: #0b488c !important;
+    background-image: linear-gradient(to bottom, #0b488c, #0b488c) !important;
+}
+
+.datepicker td,
+.datepicker th {
+    border-radius: 0px !important;
+}
+
+#back-to-top {
+    bottom: 20px;
+}
+
+.auth-one-bg-position {
+    height: 280px;
+}
