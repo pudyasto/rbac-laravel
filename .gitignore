@@ -17,5 +17,6 @@ yarn-error.log
 /.idea
 /.vscode
 public/files/temp*
-storage/*
 composer.lock
+storage/logs/laravel.log
+!storage/logs/index.html
