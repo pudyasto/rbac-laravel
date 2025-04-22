@@ -63,7 +63,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            BBI Group - Apparel One Indonesia &copy; {{ config('app.name') }} {{(date('Y') > 2023) ? '2023 - ' . date('Y') : '2023';}}
+                            {{ env('COMPANY_NAME') }} &copy; {{ config('app.name') }} {{(date('Y') > 2023) ? '2023 - ' . date('Y') : '2023';}}
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
