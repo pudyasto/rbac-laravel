@@ -11,22 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('location_photo', function (Blueprint $table) {
             $table->string('uuid',50)->primary();
+            $table->string('location_uuid',50)->nullable();
+            $table->foreign('location_uuid')->references('uuid')->on('location');
             
-            $table->string('name');
-            $table->string('username', 15)->unique();
-            $table->string('phone', 20)->unique();
-            $table->string('email')->unique();
-
-            $table->string('status', 20)->nullable();
-
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
             $table->longText('photo')->nullable();
+            $table->string('is_main', 20)->nullable();
 
             $table->string('created_by', 50)->nullable();
 
@@ -44,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('location_photo');
     }
 };

@@ -11,27 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('customer', function (Blueprint $table) {
             $table->string('uuid',50)->primary();
             
-            $table->string('name');
-            $table->string('username', 15)->unique();
-            $table->string('phone', 20)->unique();
-            $table->string('email')->unique();
+            $table->string('id_number',50)->unique();
+            $table->string('id_type',10)->default('KTP')->comment('KTP, SIM');
+            $table->longText('id_photo')->nullable();
 
-            $table->string('status', 20)->nullable();
+            $table->string('name',255)->unique();
+            $table->string('phone',20)->nullable();
+            $table->string('address',255)->nullable();
+            $table->string('city',255)->nullable();
 
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
-            $table->longText('photo')->nullable();
 
             $table->string('created_by', 50)->nullable();
-
             $table->string('updated_by', 50)->nullable();
-
             $table->string('deleted_by', 50)->nullable();
             
             $table->timestamps();
@@ -44,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('customer');
     }
 };

@@ -27,13 +27,11 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'          => 'Administrator',
             'username'      => 'administrator',
-
-            'gender'        => 'Laki',
-            'department'    => 'ICT',
-            'status'        => 'Aktif',
-
+            'phone'         => '08123456789',
             'email'         => 'mr.pudyasto@gmail.com',
-            'password'      => bcrypt('12345'),
+
+            'status'        => 'Aktif',
+            'password'      => bcrypt('//2025**'),
 
             'photo'         => null,
         ]);

@@ -1,4 +1,4 @@
-@extends('layouts.auth-register')
+@extends('layouts.auth')
 
 @push('style-default')
 
